@@ -9,7 +9,7 @@ terraform {
   backend "s3" {
     bucket = "aws-cloud-practitioner-terraform-state-bucket"
     key    = "terraform/state"
-    region = var.aws_region
+    region = "eu-west-1"
   }
 }
 
