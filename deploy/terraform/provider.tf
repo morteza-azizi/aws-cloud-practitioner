@@ -2,12 +2,12 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0"
+      version = "~> 5.0"
     }
   }
 
   backend "s3" {
-    bucket = "my-terraform-state-bucket"
+    bucket = "aws-cloud-practitioner-terraform-state-bucket"
     key    = "terraform/state"
     region = var.aws_region
   }
