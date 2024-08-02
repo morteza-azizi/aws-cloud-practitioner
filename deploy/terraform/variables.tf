@@ -23,3 +23,9 @@ variable "db_password" {
   description = "RDS database password"
   type        = string
 }
+
+variable "aws_db_instance" {
+  description = "RDS database Instance"
+  type        = string
+}
+
