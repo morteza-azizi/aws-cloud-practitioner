@@ -1,1 +1,1 @@
-# aws-cloud-practitioner
+# AWS Cloud Practitioner
