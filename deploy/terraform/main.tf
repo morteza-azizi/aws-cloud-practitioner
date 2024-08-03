@@ -9,15 +9,15 @@ resource "aws_s3_bucket" "terraform_state_bucket" {
 }
 
 resource "aws_db_instance" "postgres" {
-  allocated_storage    = 20                      
-  storage_type         = "gp2"                   
-  engine               = "postgres"              
-  engine_version       = "16.2"                  
-  instance_class       = "db.t3.micro"           
-  db_name              = "awscloudpractitionerdb"
-  username             = "awscloudpractitioner"                 
-  password             = "Password,1"
-  skip_final_snapshot  = true                    
+  allocated_storage   = 20
+  storage_type        = "gp2"
+  engine              = "postgres"
+  engine_version      = "16.2"
+  instance_class      = "db.t3.micro"
+  db_name             = "awscloudpractitionerdb"
+  username            = "awscloudpractitioner"
+  password            = "Password,1"
+  skip_final_snapshot = true
 
   tags = {
     Name = "PostgreSQL DB"
