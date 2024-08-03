@@ -33,10 +33,6 @@ terraform {
     profile = ""
     encrypt = "true"
   }
-
-  providers = {
-    aws = aws
-  }
 }
 
 
