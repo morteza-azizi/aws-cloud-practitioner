@@ -1,6 +1,5 @@
 resource "aws_s3_bucket" "terraform_state_bucket" {
   bucket = "aws-cloud-practitioner-terraform-state-bucket"
-  # acl    = "public-read-write"
 
   tags = {
     Name        = "Terraform State Bucket"
@@ -28,9 +27,11 @@ terraform {
   required_version = ">= 1.0.0"
 
   backend "s3" {
-    bucket = "aws-cloud-practitioner-terraform-state-bucket"
-    key    = "terraform/state"
-    region = "eu-west-1"
+    bucket  = "aws-cloud-practitioner-terraform-state-bucket"
+    key     = "terraform/state"
+    region  = "eu-west-1"
+    profile = ""
+    encrypt = "true"
   }
 }
 
